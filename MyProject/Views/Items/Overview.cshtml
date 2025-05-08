@@ -1,0 +1,21 @@
+﻿@model MyProject.Models.Item
+@{
+    var message = "Accessories";
+    var items = new List<string> { "Laptop", "Keyboard", "Mouse", "Printer"};
+
+    var loggIn = false;
+}
+<p>This is the name of an item @Model.name</p>
+<p class="color">@message</p>
+<ul>
+    @foreach(var item in items){
+        <li>@item</li>
+    }
+</ul>
+
+@if (loggIn)
+{
+    <div>Welcome to the Free code camp organization</div>
+}else{
+    <div>Please Log In</div>
+}
